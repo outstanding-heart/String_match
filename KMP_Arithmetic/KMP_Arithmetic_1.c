@@ -11,9 +11,9 @@
 #include <stdlib.h>
 
 /* Private define -------------------------------------- */
-#define		MAX		100
-#define		SUCCESS	1
-#define		ERROR	0
+#define		MAX			100
+#define		SUCCESS		1
+#define		ERROR		0
 
 /* Private typedef ------------------------------------- */
 typedef struct String
