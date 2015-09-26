@@ -42,13 +42,10 @@ int Simple_A(String Target, String Match, Number *Local)
 {
 	int offset, count_T, count_M, max_T, max_M;
 
-	offset = 0;
-	count_T = 0;
-	count_M = 0;
 	max_T = Target.length;
 	max_M = Match.length;
 
-	for( ; offset <= (max_M - max_T); offset++)
+	for( offset = 0; offset <= (max_M - max_T); offset++)
 	{
 		for( count_M = offset, count_T = 0; 
 				count_T < max_T; count_M++, count_T++)
@@ -89,6 +86,13 @@ int main(void)
 	fgets(Match.data, MAX, stdin);
 	Match.data[strlen(Match.data) - 1] = '\0';
 	Match.length = strlen(Match.data);
+
+/*	for(count = 0; count < Target.length; count ++ )
+	{
+		printf("%c", Target.data[count]);
+	}
+	*/
+	printf("\n");
 
 	if(Simple_A(Target, Match, &Local) == SUCCESS)
 	{
